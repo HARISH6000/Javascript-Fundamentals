@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 20px auto;
+}
+.list {
+    list-style: none;
+    padding: 0;
+}
+.list-item {
+    padding: 15px;
+    background: #f0f0f0;
+    margin: 5px 0;
+    cursor: move;
+    user-select: none;
+}
+.list-item.dragging {
+    opacity: 0.5;
+}
+.list-item.over {
+    border: 2px dashed #2196F3;
+    background: #e3f2fd;
+}
