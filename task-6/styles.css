@@ -12,11 +12,12 @@ body {
     background: #f0f0f0;
     margin: 5px 0;
     cursor: move;
-    user-select: none;
 }
+
 .list-item.dragging {
     opacity: 0.5;
 }
+
 .list-item.over {
     border: 2px dashed #2196F3;
     background: #e3f2fd;

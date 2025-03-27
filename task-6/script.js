@@ -22,12 +22,11 @@ function handleDragStart(e) {
 function handleDragEnd() {
     this.classList.remove('dragging');
     draggedItem = null;
-    // Remove 'over' class from all items
     items.forEach(item => item.classList.remove('over'));
 }
 
 function handleDragOver(e) {
-    e.preventDefault(); // Necessary to allow dropping
+    e.preventDefault();
 }
 
 function handleDragEnter(e) {
@@ -44,12 +43,12 @@ function handleDragLeave() {
 function handleDrop(e) {
     e.preventDefault();
     if (this !== draggedItem) {
-        // Get the positions
+        
         const allItems = [...document.querySelectorAll('.list-item')];
         const draggedIndex = allItems.indexOf(draggedItem);
         const dropIndex = allItems.indexOf(this);
 
-        // Reorder the DOM
+        
         if (draggedIndex < dropIndex) {
             this.parentNode.insertBefore(draggedItem, this.nextSibling);
         } else {
