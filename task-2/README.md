@@ -10,4 +10,4 @@ Build a basic calculator that performs arithmetic operations like addition, subt
 ## Demo
 Below is a GIF demonstrating the given tasks:
 
-![Demo](./output/demo.gif)
+![Demo 1](./output/demo1.gif)

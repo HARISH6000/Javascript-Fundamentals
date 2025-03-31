@@ -9,13 +9,23 @@
 .display {
     width: 95%;
     height: 50px;
-    margin-bottom: 10px;
+    margin-top: 10px;
     padding: 10px;
     font-size: 24px;
     text-align: right;
     border: none;
     background: white;
     border-radius: 5px;
+}
+.result {
+    width: 95%;
+    height: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: right;
+    color: #666;
+    background: white;
 }
 .buttons {
     display: grid;
