@@ -56,6 +56,31 @@ async function getWeather() {
     }
 }
 
+async function getCurrentLocationWeather() {
+    let latitude, longitude;
+    navigator.geolocation.getCurrentPosition(async (position) => {
+        console.log(position.coords.latitude, position.coords.longitude);
+        latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
+        try {
+            const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,weather_code`;
+            const weatherResponse = await fetch(weatherUrl);
+            if (!weatherResponse.ok) {
+                throw new Error('Failed to fetch weather data');
+            }
+
+            const weatherData = await weatherResponse.json();
+            //console.log(weatherData);
+            displayWeather("Current Location", '', weatherData.current);
+            hideError();
+            cityInput.value = '';
+        } catch (error) {
+            showError(error.message);
+            hideWeather();
+        }
+    });
+}
+
 function displayWeather(cityName, country, weatherData) {
     const cityDisplay = document.getElementById('cityName');
     const temperature = document.getElementById('temperature');

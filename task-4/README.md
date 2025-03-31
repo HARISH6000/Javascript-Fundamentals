@@ -13,4 +13,4 @@ Create a weather app that fetches and displays weather information based on a ci
 ## Demo
 Below is a GIF demonstrating the given tasks:
 
-![Demo](./output/demo.gif)
+![Demo 1](./output/demo1.gif)
